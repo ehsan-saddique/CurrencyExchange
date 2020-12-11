@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cbc-7I-Asl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cbc-7I-Asl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="17d-oV-KMq"/>
+                            <constraint firstAttribute="bottom" secondItem="cbc-7I-Asl" secondAttribute="bottom" id="1Tu-O8-h3F"/>
+                            <constraint firstItem="cbc-7I-Asl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pv4-bJ-sco"/>
+                            <constraint firstItem="cbc-7I-Asl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wEE-vM-P7Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cbc-7I-Asl" id="AYM-MK-TL2"/>
+                        <segue destination="KMc-Qh-kOs" kind="popoverPresentation" identifier="toCurrencyViewController" animates="NO" popoverAnchorView="cbc-7I-Asl" id="L4b-AR-0up">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="98.4375"/>
+        </scene>
+        <!--Currency List View Controller-->
+        <scene sceneID="Vdm-TU-zaV">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyListViewController" id="KMc-Qh-kOs" customClass="CurrencyListViewController" customModule="Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xHF-b4-zp4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDQ-13-ZHM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.44977257060373121" green="0.50542920689363247" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Currencies" id="ICK-z0-Y6P">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Lzs-lm-bqL">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="dismissController" destination="KMc-Qh-kOs" id="ug6-kw-OhU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8Q-nO-dJr">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Syt-24-FL7">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No currency found. Please check your internet connection and close this screen and reopen to fetch currencies again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0w-Xh-Yn8">
+                                        <rect key="frame" x="32" y="345.5" width="350" height="95.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.54414307125031003" green="0.54414307125031003" blue="0.54414307125031003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="W0w-Xh-Yn8" secondAttribute="trailing" constant="32" id="54V-P8-dun"/>
+                                    <constraint firstItem="W0w-Xh-Yn8" firstAttribute="leading" secondItem="Syt-24-FL7" secondAttribute="leading" constant="32" id="gSi-HK-7RB"/>
+                                    <constraint firstItem="W0w-Xh-Yn8" firstAttribute="centerX" secondItem="Syt-24-FL7" secondAttribute="centerX" id="jc8-94-050"/>
+                                    <constraint firstItem="W0w-Xh-Yn8" firstAttribute="centerY" secondItem="Syt-24-FL7" secondAttribute="centerY" id="rST-8k-D1a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pur-d4-qPI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v8Q-nO-dJr" firstAttribute="trailing" secondItem="pur-d4-qPI" secondAttribute="trailing" id="0g3-Wt-pBK"/>
+                            <constraint firstItem="Syt-24-FL7" firstAttribute="trailing" secondItem="pur-d4-qPI" secondAttribute="trailing" id="2ut-Gq-GN3"/>
+                            <constraint firstItem="Syt-24-FL7" firstAttribute="top" secondItem="pur-d4-qPI" secondAttribute="top" constant="56" id="7f0-1w-HHi"/>
+                            <constraint firstItem="v8Q-nO-dJr" firstAttribute="leading" secondItem="pur-d4-qPI" secondAttribute="leading" id="FkX-ru-vyh"/>
+                            <constraint firstItem="v8Q-nO-dJr" firstAttribute="top" secondItem="pur-d4-qPI" secondAttribute="top" constant="56" id="Kid-K4-SUz"/>
+                            <constraint firstAttribute="bottom" secondItem="v8Q-nO-dJr" secondAttribute="bottom" id="lZU-Ic-Kbr"/>
+                            <constraint firstAttribute="bottom" secondItem="Syt-24-FL7" secondAttribute="bottom" id="vS2-BV-d9b"/>
+                            <constraint firstItem="Syt-24-FL7" firstAttribute="leading" secondItem="pur-d4-qPI" secondAttribute="leading" id="vnI-8A-lYP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyView" destination="Syt-24-FL7" id="1ha-6h-ZFy"/>
+                        <outlet property="tableView" destination="v8Q-nO-dJr" id="cq5-Ut-6GS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5vy-eB-5P6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955.07246376811599" y="98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
