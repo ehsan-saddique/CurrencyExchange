@@ -1,16 +1,17 @@
-# Introduction
+## Introduction
 A simple app to check currency exchange rates using Currency Layer free api https://currencylayer.com/documentation
 
-# Technologies Used
+## Technologies Used
 * Xcode 12
 * Swift 5
 * Core Data
 * MVVM Architecture
 * Dependency Injection
 
-# Prerequisite
+## Prerequisite
 * Xcode 12
 * Minimuim iOS 13
 
-# Preview
-![](Currency Conversion/Preview.gif)
+## Preview
+
+![alt-text](Currency Conversion/Preview.gif)
