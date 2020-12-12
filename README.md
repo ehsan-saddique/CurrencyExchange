@@ -14,4 +14,4 @@ A simple app to check currency exchange rates using Currency Layer free api http
 
 ## Preview
 
-![alt-text](Currency Conversion/Preview.gif)
+![Loading Preview..](Currency%20Conversion/Preview.gif)
