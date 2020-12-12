@@ -11,3 +11,6 @@ A simple app to check currency exchange rates using Currency Layer free api http
 # Prerequisite
 * Xcode 12
 * Minimuim iOS 13
+
+# Preview
+![alt-text](Currency Conversion/Preview.gif)
