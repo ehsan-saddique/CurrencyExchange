@@ -1,3 +1,6 @@
+## Preview
+![Loading Preview..](Currency%20Conversion/Preview.gif)
+
 ## Introduction
 A simple app to check currency exchange rates using Currency Layer free api https://currencylayer.com/documentation
 
@@ -11,7 +14,3 @@ A simple app to check currency exchange rates using Currency Layer free api http
 ## Prerequisite
 * Xcode 12
 * Minimuim iOS 13
-
-## Preview
-
-![Loading Preview..](Currency%20Conversion/Preview.gif)
